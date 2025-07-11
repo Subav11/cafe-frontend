@@ -1,16 +1,19 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 //to enable frontend to use our backend apis
 import axios from "axios";
 export default function Register() {
   const [user, setUser] = useState({});
   const [err, setError] = useState();
+  const Navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async () => {
     try {
       const url = `${API_URL}/api/users/register`;
       const result = await axios.post(url, user);
       setError("Data saved successfully");
+      Navigate("/login");
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
@@ -52,7 +55,9 @@ export default function Register() {
       </p>
       <p>{err}</p>
       <hr />
-      <h4>Already a member? <Link to="/login">Login</Link></h4>
+      <h4>
+        Already a member? <Link to="/login">Login here...</Link>
+      </h4>
     </div>
   );
 }

@@ -1,16 +1,19 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [user, setUser] = useState({});
   const [err, setError] = useState();
+  const Navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async () => {
     try {
       const url = `${API_URL}/api/users/login`;
       const result = await axios.post(url, user);
       setError("Welcome");
+      Navigate("/");
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
