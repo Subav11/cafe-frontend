@@ -1,15 +1,15 @@
 import { useState } from "react";
-//to enable frontend to use our backend apis
 import axios from "axios";
-export default function Register() {
+
+export default function Login() {
   const [user, setUser] = useState({});
   const [err, setError] = useState();
   const API_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async () => {
     try {
-      const url = `${API_URL}/api/users/register`;
+      const url = `${API_URL}/api/users/login`;
       const result = await axios.post(url, user);
-      setError("Data saved successfully");
+      setError("Welcome");
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
@@ -17,32 +17,18 @@ export default function Register() {
   };
   return (
     <div>
-      <h2>Registration Form</h2>
-      <p>
-        <input
-          type="text"
-          placeholder="First Name"
-          onChange={(e) => setUser({ ...user, firstName: e.target.value })}
-        />
-      </p>
-      <p>
-        <input
-          type="text"
-          placeholder="Last Name"
-          onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-        />
-      </p>
+      <h1>Login Form</h1>
       <p>
         <input
           type="email"
-          placeholder="Email Address"
+          placeholder="Email"
           onChange={(e) => setUser({ ...user, email: e.target.value })}
         />
       </p>
       <p>
         <input
           type="password"
-          placeholder="New Password"
+          placeholder="Password"
           onChange={(e) => setUser({ ...user, password: e.target.value })}
         />
       </p>
