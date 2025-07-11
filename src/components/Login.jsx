@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [user, setUser] = useState({});
@@ -36,6 +37,8 @@ export default function Login() {
         <button onClick={handleSubmit}>Submit</button>
       </p>
       <p>{err}</p>
+      <hr />
+      <Link to="/register">Create account</Link>
     </div>
   );
 }

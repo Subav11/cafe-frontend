@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 //to enable frontend to use our backend apis
 import axios from "axios";
 export default function Register() {
@@ -50,6 +51,8 @@ export default function Register() {
         <button onClick={handleSubmit}>Submit</button>
       </p>
       <p>{err}</p>
+      <hr />
+      <h4>Already a member? <Link to="/login">Login</Link></h4>
     </div>
   );
 }

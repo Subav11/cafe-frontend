@@ -3,3 +3,6 @@
 // npm install to install basic packages
 //npm run dev to start the program
 cafe-frontend-five.vercel.app
+
+//to use routes
+// npm i react-router-dom
