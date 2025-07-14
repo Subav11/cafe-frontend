@@ -12,6 +12,8 @@ import Orders from "./components/Orders.jsx";
 import Product from "./components/Product.jsx";
 import Products from "./components/Products.jsx";
 import Users from "./components/Users.jsx";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 function App() {
@@ -22,12 +24,7 @@ function App() {
       {/* <Home name="John" age={21} /> */}
       {/* <Temp flag={true} /> */}
       <BrowserRouter>
-        <h1>SBY Cafe</h1>
-        <Link to="/">Home</Link>-
-        <Link to="/cart">MyCart</Link>-
-        <Link to="/order">MyOrder</Link>-
-        <Link to="/admin">Admin</Link>-
-        <Link to="/login">Login</Link>
+        <Header/>
         <Routes>
           <Route index element={<Product/>}/>
           <Route path="register" element={<Register/>}/>
@@ -40,7 +37,7 @@ function App() {
           <Route path="orders" element={<Orders/>}/>
           </Route>
         </Routes>
-        <h3>This is Footer</h3>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
