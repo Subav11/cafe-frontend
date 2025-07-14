@@ -128,7 +128,6 @@ export default function Users() {
                 <th>Last Name</th>
                 <th>Email address</th>
                 <th>Role</th>
-
                 <th>Action</th>
               </tr>
             </thead>
