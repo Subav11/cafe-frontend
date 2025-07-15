@@ -1,18 +1,19 @@
+import React, { useContext } from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
+import { AppContext } from "../App";
 export default function Login() {
-  const [user, setUser] = useState({});
-  const [err, setError] = useState();
+  const {user, setUser} = useContext(AppContext);
+  const [error, setError] = useState();
   const Navigate = useNavigate();
   const API_URL = import.meta.env.VITE_API_URL;
   const handleSubmit = async () => {
     try {
       const url = `${API_URL}/api/users/login`;
       const result = await axios.post(url, user);
-      setError("Welcome");
+      setUser(result.data);
       Navigate("/");
     } catch (err) {
       console.log(err);
@@ -21,11 +22,12 @@ export default function Login() {
   };
   return (
     <div>
-      <h1>Login Form</h1>
+      <h2>Login</h2>
+      {error}
       <p>
         <input
-          type="email"
-          placeholder="Email"
+          type="text"
+          placeholder="Email Address"
           onChange={(e) => setUser({ ...user, email: e.target.value })}
         />
       </p>
@@ -39,9 +41,8 @@ export default function Login() {
       <p>
         <button onClick={handleSubmit}>Submit</button>
       </p>
-      <p>{err}</p>
       <hr />
-      <Link to="/register">Create account</Link>
+      <Link to="/register">Create Account</Link>
     </div>
   );
 }
