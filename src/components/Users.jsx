@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { AppContext } from "../App";
 import axios from "axios";
-import "../styles/users.css"
+import "../styles/Users.css"
 export default function Users() {
   const [users, setUsers] = useState([]);
   const { user } = useContext(AppContext);
