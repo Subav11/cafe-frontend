@@ -95,7 +95,7 @@ export default function Products() {
       fetchProducts();
       setEditId();
       resetForm();
-      setError("Product updated successfully");
+      setError("Product information updated successfully");
     } catch (err) {
       console.log(err);
       setError("Something went wrong");

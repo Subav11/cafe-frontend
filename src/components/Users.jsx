@@ -40,7 +40,7 @@ export default function Users() {
       setError("Something went wrong");
     }
   };
-     //if there is a change in error var then fetchUsers func will be called again since [error],
+  //if there is a change in error var then fetchUsers func will be called again since [error],
   // otherwise it will be called only once
   useEffect(() => {
     fetchUsers();

@@ -17,12 +17,7 @@ export default function Profile() {
       const url = `${API_URL}/api/users/${user.id}/profile`;
       const result = await axios.get(url);
       setProfile(result.data);
-      setForm({
-        firstName: result.data.firstName || "",
-        lastName: result.data.lastName || "",
-        email: result.data.email || "",
-        password: result.data.password || "",
-      });
+      console.log(profile)
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
@@ -63,7 +58,7 @@ export default function Profile() {
         <input
           name="firstName"
           type="text"
-          value={form.firstName}
+          defaultValue={profile.firstName}
           onChange={handleChange}
         />
 
@@ -71,7 +66,7 @@ export default function Profile() {
         <input
           name="lastName"
           type="text"
-          value={form.lastName}
+          defaultValue={profile.lastName}
           onChange={handleChange}
         />
 
@@ -79,7 +74,7 @@ export default function Profile() {
         <input
           name="email"
           type="email"
-          value={form.email}
+          defaultValue={profile.email}
           onChange={handleChange}
         />
 
@@ -87,7 +82,7 @@ export default function Profile() {
         <input
           name="password"
           type="password"
-          value={form.password}
+          defaultValue={profile.password}
           onChange={handleChange}
         />
 
