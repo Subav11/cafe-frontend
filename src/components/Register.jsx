@@ -25,7 +25,7 @@ export default function Register() {
 
   return (
     <div className="App-Register-Row">
-      <div >
+      <div>
         <h2>Registration Form</h2>
         {error}
         <p>
