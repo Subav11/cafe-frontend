@@ -1,3 +1,33 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
 * {
-    margin: 0px
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffaf3;
+  color: #4e342e;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  list-style: none;
 }

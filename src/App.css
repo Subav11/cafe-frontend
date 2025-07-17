@@ -1,3 +1,11 @@
-.App-Container{
-    background-color: #eeeeee;
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fffaf3;
+}
+
+.App-Container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

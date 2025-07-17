@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../styles/Home.css";
 // Components return jsx - which is javascript function returns html elements
 // function Home(props) {
 //   //React Fragment <> for returning more than one html elements

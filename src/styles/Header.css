@@ -1,0 +1,45 @@
+/* Header.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@500&display=swap');
+
+.header-container {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff7f0;
+  color: #5a3e2b;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #f4e3d7;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #8B4513;
+  margin: 0;
+}
+
+.header-links {
+  display: flex;
+  gap: 16px;
+}
+
+.header-links a {
+  color: #5a3e2b;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.header-links a:hover {
+  background-color: #ffe5cc;
+  color: #8B4513;
+}

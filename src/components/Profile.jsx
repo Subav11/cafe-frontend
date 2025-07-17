@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AppContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import "../styles/Profile.css"; // Make sure this CSS file is created
+
 export default function Profile() {
   const [profile, setProfile] = useState({});
   const { user, setUser } = useContext(AppContext);
@@ -9,17 +11,24 @@ export default function Profile() {
   const [error, setError] = useState();
   const API_URL = import.meta.env.VITE_API_URL;
   const Navigate = useNavigate();
+
   const fetchProfile = async () => {
     try {
       const url = `${API_URL}/api/users/${user.id}/profile`;
       const result = await axios.get(url);
       setProfile(result.data);
-      console.log(profile);
+      setForm({
+        firstName: result.data.firstName || "",
+        lastName: result.data.lastName || "",
+        email: result.data.email || "",
+        password: result.data.password || "",
+      });
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
     }
   };
+
   useEffect(() => {
     fetchProfile();
   }, []);
@@ -32,54 +41,63 @@ export default function Profile() {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async () => {
     try {
       const url = `${API_URL}/api/users/${profile._id}/profile`;
-      const result = await axios.patch(url, form);
+      await axios.patch(url, form);
       fetchProfile();
-      setError("Data saved successfully.");
+      setError("Profile updated successfully.");
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
     }
   };
+
   return (
-    <div>
-      <h3>My Profile</h3>
-      <button onClick={logout}>Logout</button>
-      <p>
+    <div className="profile-container">
+      <h2 className="profile-title">My Profile</h2>
+      {error && <p className="profile-error">{error}</p>}
+      <div className="profile-form">
+        <label>First Name</label>
         <input
           name="firstName"
           type="text"
+          value={form.firstName}
           onChange={handleChange}
-          defaultValue={profile.firstName}
         />
-      </p>
-      <p>
+
+        <label>Last Name</label>
         <input
           name="lastName"
           type="text"
+          value={form.lastName}
           onChange={handleChange}
-          defaultValue={profile.lastName}
         />
-      </p>
-      <p>
+
+        <label>Email</label>
         <input
           name="email"
-          type="text"
+          type="email"
+          value={form.email}
           onChange={handleChange}
-          defaultValue={profile.email}
         />
-      </p>
-      <p>
+
+        <label>Password</label>
         <input
           name="password"
           type="password"
+          value={form.password}
           onChange={handleChange}
-          defaultValue={profile.password}
         />
-      </p>
-      <button onClick={handleSubmit}>Update Profile</button>
+
+        <div className="profile-actions">
+          <button onClick={handleSubmit}>Update Profile</button>
+          <button className="logout-btn" onClick={logout}>
+            Logout
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

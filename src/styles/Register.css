@@ -1,0 +1,77 @@
+.App-Register-Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff8ec; /* Light café cream background */
+  font-family: 'Poppins', sans-serif;
+}
+
+.App-Register-Row > div {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.App-Register-Row h2 {
+  text-align: center;
+  color: #5e3c2c; /* Café brown */
+  margin-bottom: 1rem;
+}
+
+.App-Register-Row input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.App-Register-Row input:focus {
+  border-color: #7a5c3c;
+  outline: none;
+}
+
+.App-Register-Row button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #7a5c3c; /* Café deep brown */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.App-Register-Row button:hover {
+  background-color: #5e4028;
+}
+
+.App-Register-Row hr {
+  margin: 1.5rem 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.App-Register-Row a {
+  text-decoration: none;
+  color: #5e3c2c;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.App-Register-Row a:hover {
+  color: #3d2819;
+}

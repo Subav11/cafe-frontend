@@ -1,0 +1,91 @@
+/* Orders.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+
+.orders-container {
+  font-family: 'Quicksand', sans-serif;
+  padding: 40px 20px;
+  background-color: #fffaf3;
+  min-height: 100vh;
+  color: #4a2d1f;
+}
+
+.orders-container h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #6a3c24;
+}
+
+.orders-filter {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.orders-filter select {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdf7f2;
+  color: #4a2d1f;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.order-item {
+  background-color: #fff;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #d4a373;
+}
+
+.order-item span {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.order-item button {
+  padding: 6px 12px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+}
+
+.order-item button:first-of-type {
+  background-color: #e76f51;
+  color: white;
+}
+
+.order-item button:last-of-type {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  background-color: #faedcd;
+  color: #4a2d1f;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+}

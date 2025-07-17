@@ -1,0 +1,29 @@
+/* Admin.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.admin-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 30px;
+  background-color: #fff;
+  color: #333;
+}
+
+.admin-links {
+  margin-bottom: 20px;
+}
+
+.admin-links a {
+  text-decoration: none;
+  color: #8B4513;
+  margin-right: 15px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.admin-links a:hover,
+.admin-links .active {
+  background-color: #F4E3D7;
+}

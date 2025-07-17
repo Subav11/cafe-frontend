@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useContext } from "react";
 import { AppContext } from "../App";
 import axios from "axios";
+import "../styles/users.css"
 export default function Users() {
   const [users, setUsers] = useState([]);
   const { user } = useContext(AppContext);
@@ -143,7 +144,7 @@ export default function Users() {
     });
   };
   return (
-    <div>
+    <div className="users-page">
       <h2>User Management</h2>
       {error}
       <div>
@@ -210,7 +211,7 @@ export default function Users() {
           )}
         </form>
       </div>
-      <div>
+      <div className="search-bar">
         <input type="text" onChange={(e) => setSearchVal(e.target.value)} />
         <button onClick={() => fetchUsers()}>Search</button>
       </div>
@@ -242,7 +243,7 @@ export default function Users() {
           ))}
         </table>
       </div>
-      <div>
+      <div className="pagination">
         <button disabled={page === 1} onClick={() => setPage(page - 1)}>
           Previous
         </button>

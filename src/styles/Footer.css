@@ -1,0 +1,11 @@
+/* Footer.css */
+.footer {
+  background-color: #d4a373;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}

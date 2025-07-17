@@ -1,0 +1,65 @@
+/* Order.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.order-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 40px 20px;
+  background-color: #fffaf5;
+  min-height: 100vh;
+  color: #5a3e2b;
+}
+
+.order-container h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #8B4513;
+}
+
+.order-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 6px solid #d2691e2e;
+}
+
+.order-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.order-table {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px;
+  border: 1px solid #eee;
+  text-align: left;
+  background-color: #fffdfb;
+}
+
+.order-table th {
+  background-color: #f3e8dc;
+  color: #5a3e2b;
+  font-weight: 500;
+}
+
+.order-table td {
+  color: #3d2a1b;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin-top: 24px;
+}
