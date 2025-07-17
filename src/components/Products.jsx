@@ -38,8 +38,8 @@ export default function Products() {
     try {
       const url = `${API_URL}/api/products/${id}`;
       const result = await axios.delete(url);
-      setError("User Deleted Successfully");
-      fetchUsers();
+      setError("Product Deleted Successfully");
+      fetchProducts();
     } catch (err) {
       console.log(err);
       setError("Something went wrong");
