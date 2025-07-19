@@ -3,8 +3,8 @@ import "../styles/Register.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-
 // to enable frontend to use our backend apis
+
 export default function Register() {
   const [user, setUser] = useState({});
   const [error, setError] = useState();

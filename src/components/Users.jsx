@@ -20,7 +20,7 @@ export default function Users() {
   const [page, setPage] = useState(1);
   const [searchVal, setSearchVal] = useState("");
   const [totalPages, setTotalPages] = useState(1);
-  const [limit, setLimit] = useState(2);
+  const [limit, setLimit] = useState(3);
   const [editId, setEditId] = useState();
   const API_URL = import.meta.env.VITE_API_URL;
   const fetchUsers = async () => {
