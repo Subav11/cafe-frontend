@@ -21,7 +21,7 @@ export default function Cart() {
   const decrement = (id, qty) => {
     const updatedCart = cart.map((product) =>
       product._id === id ? { ...product, qty: qty - 1 } : product
-    );
+    ).filter(item => item.qty > 0);
     setCart(updatedCart);
   };
 

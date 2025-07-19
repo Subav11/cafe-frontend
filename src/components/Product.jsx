@@ -31,8 +31,13 @@ export default function Product() {
   const addToCart = (product) => {
     const found = cart.find((item) => item._id === product._id);
     if (!found) {
-      product.qty = 1;
-      setCart([...cart, product]);
+      const updatedProduct = { ...product, qty: 1 };
+      setCart([...cart, updatedProduct]);
+    } else {
+      const updatedCart = cart.map((item) =>
+        item._id === product._id ? { ...item, qty: item.qty + 1 } : item
+      );
+      setCart(updatedCart);
     }
   };
 
@@ -55,7 +60,10 @@ export default function Product() {
           Previous
         </button>
         {page} of {totalPages}
-        <button disabled={page === totalPages} onClick={() => setPage(page + 1)}>
+        <button
+          disabled={page === totalPages}
+          onClick={() => setPage(page + 1)}
+        >
           Next
         </button>
       </div>
