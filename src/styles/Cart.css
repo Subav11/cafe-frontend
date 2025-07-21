@@ -77,3 +77,10 @@
 .cart-btn button:hover {
   background-color: #A0522D;
 }
+
+.cart-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: gray;
+  margin-top: 20px;
+}

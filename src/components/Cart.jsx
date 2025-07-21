@@ -71,11 +71,15 @@ export default function Cart() {
         )}
       <div className="cart-order-summary">Order Value: ₹{orderValue}</div>
       <div className="cart-btn">
-        {user?.token ? (
-          <button onClick={placeOrder}>Place Order</button>
-        ) : (
-          <button onClick={() => Navigate("/login")}>Login to Order</button>
-        )}
+        
+         {cart.length === 0 || cart.every((item) => item.qty === 0) ? (
+    <p className="cart-empty">Your cart is empty.</p>
+  ) : user?.token ? (
+    <button onClick={placeOrder}>Place Order</button>
+  ) : (
+    <button onClick={() => Navigate("/login")}>Login to Order</button>
+  )}
+      
       </div>
     </div>
   );
