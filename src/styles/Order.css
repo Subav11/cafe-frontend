@@ -5,16 +5,9 @@
 .order-container {
   font-family: 'Poppins', sans-serif;
   padding: 40px 20px;
-  background-color: #fffaf5;
+  background-color: #fff;
   min-height: 100vh;
   color: #5a3e2b;
-}
-
-.order-container h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #8B4513;
 }
 
 .order-card {
@@ -62,4 +55,29 @@ hr {
   border: none;
   border-top: 1px solid #eee;
   margin-top: 24px;
+}
+
+.no-orders {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8B4513;
+  margin-top: 20px;
+}
+
+.login-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #a0522d;
+  color: #fffaf5;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-button:hover {
+  background-color: #8b4513;
 }

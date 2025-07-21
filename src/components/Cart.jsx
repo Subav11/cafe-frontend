@@ -53,7 +53,6 @@ export default function Cart() {
 
   return (
     <div className="cart-container">
-      <h2 className="cart-title">My Cart</h2>
       {error && <p className="cart-error">{error}</p>}
       {cart &&
         cart.map(
