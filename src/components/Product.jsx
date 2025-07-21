@@ -6,7 +6,7 @@ import "../styles/Product.css";
 export default function Product() {
   const API_URL = import.meta.env.VITE_API_URL;
   const [page, setPage] = useState(1);
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(4);
   const [totalPages, setTotalPages] = useState(1);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState();
