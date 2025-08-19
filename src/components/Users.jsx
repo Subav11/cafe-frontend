@@ -223,6 +223,7 @@ export default function Users() {
               <th>Last Name</th>
               <th>Email Address</th>
               <th>Role</th>
+              <th>Action</th>
             </tr>
           </thead>
           {users.map((value) => (
