@@ -15,7 +15,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 export const AppContext = createContext();
 function App() {
-  //props - properties - to give arguments in our components
+  //props - properties - to give arguments to our components
   //21 is a js expression and we write js exp inside a curly brace
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState({});
